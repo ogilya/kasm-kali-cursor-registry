@@ -1,0 +1,30 @@
+{
+  "friendly_name": "Ubuntu with Cursor IDE",
+  "description": "Custom Ubuntu container with Cursor IDE, Microsoft Edge, custom desktop background, and auto-launch configuration. Includes DNS configuration and support for development tools.",
+  "image_src": "kasm-ubuntu-cursor",
+  "architecture": ["amd64"],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "conradwebapps.azurecr.io/kasm-ubuntu-cursor:latest",
+      "uncompressed_size_mb": 3000,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ],
+  "categories": ["Development"],
+  "docker_registry": "conradwebapps.azurecr.io",
+  "run_config": {
+    "hostname": "kasm",
+    "user": "root",
+    "dns": ["10.10.10.1"],
+    "environment": {
+      "START_PULSEAUDIO": "0"
+    }
+  },
+  "exec_config": {},
+  "notes": "Requires root user. Custom DNS (10.10.10.1) configured. Cursor IDE auto-launches on login. Microsoft Edge pre-installed. Custom desktop background. Configure S3 persistent storage for per-user profiles.",
+  "cores": 2,
+  "memory": 4096
+}
