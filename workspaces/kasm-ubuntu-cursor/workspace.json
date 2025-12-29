@@ -25,6 +25,6 @@
   },
   "exec_config": {},
   "notes": "Requires root user. Custom DNS (10.10.10.1) configured. Cursor IDE auto-launches on login. Microsoft Edge pre-installed. Custom desktop background. Configure S3 persistent storage for per-user profiles.",
-  "cores": 2,
-  "memory": 4096
+  "cores": 1,
+  "memory": 2048
 }
