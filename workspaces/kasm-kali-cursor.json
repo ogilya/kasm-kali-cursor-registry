@@ -1,0 +1,31 @@
+{
+  "friendly_name": "Kali Linux with Cursor IDE",
+  "description": "Custom Kali Linux container with Cursor IDE, Microsoft Edge, custom desktop background, and auto-launch configuration. Includes DNS configuration and support for additional Kali security tools.",
+  "image_src": "kasm-kali-cursor",
+  "architecture": ["amd64"],
+  "compatibility": [
+    {
+      "version": "1.18.x",
+      "image": "conradwebapps.azurecr.io/kasm-kali-cursor:latest",
+      "uncompressed_size_mb": 3500,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ],
+  "categories": ["Security", "Development"],
+  "docker_registry": "conradwebapps.azurecr.io",
+  "run_config": {
+    "hostname": "kasm",
+    "user": "root",
+    "dns": ["10.10.10.1"],
+    "environment": {
+      "START_PULSEAUDIO": "0"
+    }
+  },
+  "exec_config": {},
+  "notes": "Requires root user. Custom DNS (10.10.10.1) configured. Cursor IDE auto-launches on login. Microsoft Edge pre-installed. Custom desktop background. Supports apt package management for additional Kali tools. Configure S3 persistent storage for per-user profiles.",
+  "cores": 2,
+  "memory": 4096
+}
+
