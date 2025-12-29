@@ -6,7 +6,7 @@
   "compatibility": [
     {
       "version": "1.18.x",
-      "image": "conradwebapps.azurecr.io/kasm-kali-cursor:latest",
+      "image": "ghcr.io/ogilya/kasm-kali-cursor:latest",
       "uncompressed_size_mb": 3500,
       "available_tags": [
         "latest"
@@ -14,7 +14,7 @@
     }
   ],
   "categories": ["Security", "Development"],
-  "docker_registry": "conradwebapps.azurecr.io",
+  "docker_registry": "ghcr.io",
   "run_config": {
     "hostname": "kasm",
     "user": "root",
@@ -28,4 +28,3 @@
   "cores": 2,
   "memory": 4096
 }
-
