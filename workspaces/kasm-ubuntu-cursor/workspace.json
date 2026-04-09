@@ -1,20 +1,20 @@
 {
-  "friendly_name": "Ubuntu with Cursor IDE",
-  "description": "Custom Ubuntu container with Cursor IDE, Microsoft Edge, custom desktop background, and auto-launch configuration. Includes DNS configuration and support for development tools.",
-  "image_src": "kasm-ubuntu-cursor",
+  "friendly_name": "Subagent Genesis",
+  "description": "Custom Kali Linux container with Cursor IDE, Microsoft Edge, custom desktop background, and auto-launch configuration. Includes DNS configuration and support for additional Kali security tools.",
+  "image_src": "kasm-kali-cursor",
   "architecture": ["amd64"],
   "compatibility": [
     {
       "version": "1.18.x",
-      "image": "conradwebapps.azurecr.io/kasm-ubuntu-cursor:latest",
-      "uncompressed_size_mb": 3000,
+      "image": "securewebapps-erehc2e3dma0fcey.azurecr.io/kasm-kali:current",
+      "uncompressed_size_mb": 3500,
       "available_tags": [
         "latest"
       ]
     }
   ],
-  "categories": ["Development"],
-  "docker_registry": "conradwebapps.azurecr.io",
+  "categories": ["Security", "Development"],
+  "docker_registry": "securewebapps-erehc2e3dma0fcey.azurecr.io",
   "run_config": {
     "hostname": "kasm",
     "user": "root",
@@ -24,7 +24,7 @@
     }
   },
   "exec_config": {},
-  "notes": "Requires root user. Custom DNS (10.10.10.1) configured. Cursor IDE auto-launches on login. Microsoft Edge pre-installed. Custom desktop background. Configure S3 persistent storage for per-user profiles.",
-  "cores": 1,
-  "memory": 2048
+  "notes": "Requires root user. Custom DNS (10.10.10.1) configured. Cursor IDE auto-launches on login. Microsoft Edge pre-installed. Custom desktop background. Supports apt package management for additional Kali tools. Configure S3 persistent storage for per-user profiles.",
+  "cores": 2,
+  "memory": 6048
 }
